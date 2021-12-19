@@ -1,0 +1,17 @@
+#Options +SymLinksIfOwnerMatch
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php?zicco=$1 [QSA,L]
+
+
+
+
+
+
+#RewriteEngine On    موتور فعال می کنیم
+#RewriteRule ^(.+)$ indexR.php?zicco=$1 [QSA,L]   چیزی که ما وارد می کنیم جلوی زیکو $1  هر چیزی بتونه قرا بگیره .   + حداقل یک کاراکتر باشد و خالی نباشد
+#[QSA,L]  ==>  query string append , L
+
+#RewriteCond %{REQUEST_FILENAME} !-d     #directory
+#RewriteCond %{REQUEST_FILENAME} !-f     #file
